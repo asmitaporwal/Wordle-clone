@@ -38,7 +38,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: hsl(var(--hue, 200),
-            var(--saturation, 1%), calc(var(--lightness-offset, 0%) + var(--lightness, 51%)));
+            var(--saturation, 1%),
+            calc(var(--lightness-offset, 0%) + var(--lightness, 51%)));
     color: white;
     fill: white;
     text-transform: uppercase;
@@ -98,6 +99,7 @@ body {
     justify-content: center;
     align-items: center;
     user-select: none;
+    transition: transform 250ms linear;
 }
 
 .tile[data-state="active"] {
@@ -124,7 +126,7 @@ body {
 }
 
 .tile.flip {
-    background: red;
+    transform: rotateX(90deg);
 }
 
 @keyframes shake {
